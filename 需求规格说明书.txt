@@ -1,0 +1,77 @@
+1. 用户分类：
+（1）后台管理员
+（2）已注册用户
+
+2. 用户操作
+（1）后台管理员
+
+（2）用户
+	(i）  发布/撤销信息：时间 出发地 目的地 预期人数/已有人数
+   （ii)  搜索信息:  提供（时间 出发地 目的地）来搜索
+   		  查看其余用户信息
+   （iii）发送/取消请求
+   （vi） 接收/拒绝请求
+   （v）  点赞
+   （vi） 注册 登陆 密码找回
+typedef enum {
+    male,
+    female,
+    undetermined
+}genderType;
+
+class University{
+	long uID;
+	string name;
+	string nation;
+	string state;
+	string city;
+}
+
+class User{
+	long ID;
+	string nickName;
+	string passWord;
+	string email;
+	University university;
+	genderType gender;
+	int reputation;
+	string telNum;
+	string photoUrl;
+
+	sendMessage();
+	withdrawMessage();
+	sendRequest();
+	withdrawRequest();
+	acceptRequest();
+	denyRequest();
+	search();
+}
+
+class Message{
+	long messageID;
+	long senderID;
+	NSDate timestamp;
+	NSDate leavingTime;
+	string source;
+	string destination;
+	int totalNum;
+	int currentNum;
+
+}
+
+class Request{
+	long messageId;
+	long senderId;
+	long receiverID;
+}
+
+/*
+class relation{
+	long user1;
+	long user2;
+	NSDate lasttime;
+}
+*/
+
+
+
